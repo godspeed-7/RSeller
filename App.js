@@ -10,10 +10,12 @@ import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
+import AppText from './app/components/AppText';
+import AppTextInput from './app/components/AppTextInput';
 
 
 export default function App() {
   return <Screen>
-<ListingScreen/>
+<AppTextInput placeholder="Type here..." icon="email"/>
   </Screen>;
 }
