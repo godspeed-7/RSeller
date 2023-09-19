@@ -3,8 +3,9 @@ import ListItem from './ListItem';
 import Screen from './Screen';
 import ListItemSeparator from './ListItemSeparator';
 import ListItemDeleteAction from './ListItemDeleteAction';
+import React, { useState } from 'react';
 
-const messages = [
+const initMessages = [
     {
         id: 1,
         title: 'T1',
@@ -20,6 +21,15 @@ const messages = [
 ]
 
 export default function MessagesScreen(props) {
+
+  const [messages, setMessages] = useState(initMessages);
+  const [refreshing, setRefreshing] = useState(false);
+
+
+  const handleDelete = message => {
+    setMessages(messages.filter(m => m.id !== message.id));
+  }
+
   return (
     <Screen>
     <FlatList
@@ -31,10 +41,12 @@ export default function MessagesScreen(props) {
           subTitle={item.description}
           image={item.image}
           onPress={() => {}}
-          renderRightActions={ListItemDeleteAction}
+          renderRightActions={() => <ListItemDeleteAction onPress={() => handleDelete(item)}/>}
         />
       )}
       ItemSeparatorComponent={<ListItemSeparator/>}
+      refreshing={refreshing}
+      onRefresh={() => {}}
     />
     </Screen>
   );
