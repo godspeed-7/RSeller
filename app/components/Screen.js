@@ -6,8 +6,8 @@ export default function Screen(props) {
   const {style, children} = props;
   return (
     <SafeAreaView style={[styles.screen, style]}>
-      {/* <View>{props.children}</View> */}
-      {props.children}
+      <View style={style}>{props.children}</View>
+      {/* {props.children} */}
     </SafeAreaView>
   )
 }

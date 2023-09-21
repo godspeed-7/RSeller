@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import colors from '../config/colors';
 import defaultStyles from '../config/styles';
-import AppText from './AppText';
+import AppText from './Text';
 import Screen from './Screen';
 import PickerItem from './PickerItem';
 

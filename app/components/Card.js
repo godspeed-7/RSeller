@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
-import AppText from './AppText';
+import AppText from './Text';
 import colors from '../config/colors';
 
 export default function Card(props) {

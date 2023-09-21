@@ -4,16 +4,17 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import Card from './app/components/Card';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
-import MessagesScreen from './app/components/MessageScreen';
+import MessagesScreen from './app/screens/MessageScreen';
 import Screen from './app/components/Screen';
 import Icon from './app/components/Icon';
-import ListItem from './app/components/ListItem';
+import ListItem from './app/components/lists/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
-import AppText from './app/components/AppText';
-import AppTextInput from './app/components/AppTextInput';
-import AppPicker from './app/components/AppPicker';
+import AppText from './app/components/Text';
+import AppTextInput from './app/components/TextInput';
+import AppPicker from './app/components/Picker';
 import { useState } from 'react';
+import LoginScreen from './app/screens/LoginScreen';
 
 const categories = [
   {
@@ -32,15 +33,6 @@ const categories = [
 export default function App() {
   const [category, setCategory] = useState(categories[0]);
   return (
-    <Screen>
-      <AppPicker
-        selectedItem={category}
-        onSelectItem={item => setCategory(item)}
-        placeholder="Category"
-        icon="apps"
-        items={categories}
-      />
-      <AppTextInput placeholder="Email" icon="email" />
-    </Screen>
+<LoginScreen/>
   );
 }
