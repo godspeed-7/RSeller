@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Pressable } from 'react-native';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
-import Card from './app/components/Card';
-import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
-import MessagesScreen from './app/screens/MessageScreen';
-import Screen from './app/components/Screen';
-import Icon from './app/components/Icon';
-import ListItem from './app/components/lists/ListItem';
+import React, { useState } from 'react';
+import ListingEditScreen from './app/screens/ListingEditScreen';
 import AccountScreen from './app/screens/AccountScreen';
-import ListingScreen from './app/screens/ListingScreen';
-import AppText from './app/components/Text';
-import AppTextInput from './app/components/TextInput';
-import AppPicker from './app/components/Picker';
-import { useState } from 'react';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import ListingsScreen from './app/screens/ListingsScreen';
 import LoginScreen from './app/screens/LoginScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
+import RegisterScreen from './app/screens/RegisterScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
 const categories = [
   {
@@ -33,6 +26,6 @@ const categories = [
 export default function App() {
   const [category, setCategory] = useState(categories[0]);
   return (
-<LoginScreen/>
+<WelcomeScreen/>
   );
 }
